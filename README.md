@@ -102,7 +102,7 @@ AdmAI_Manager.shared.speechToText(linkOnline: "url to file audio") { data, resul
 
 Để sử dụng speechToText thì bạn cần truyền vào path của file **audio (.wav, .mp3)** trong storage
 
-```
+```swift
 AdmAI_Manager.shared.speechToText(fileLocal: "file path") { data, result, error in
     if let data = data, let value = value {
         do {
@@ -126,7 +126,7 @@ AdmAI_Manager.shared.speechToText(fileLocal: "file path") { data, result, error 
 
 Để sử dụng textToSpeech thì bạn cần truyền vào nội dung cần chuyển sang audio.
 
-```
+```swift
 AdmAI_Manager.shared.textToSpeech(text: "Nội dụng cần chuyển sang audio") { data, value, error in
   if let data = data, let value = value {
     do {
@@ -146,7 +146,7 @@ AdmAI_Manager.shared.textToSpeech(text: "Nội dụng cần chuyển sang audio"
 
 Nếu bạn muốn truyền vào mã giọng đọc(speakerID), tần số audio(sampleRate), định dạng audio(outputFormat)
 
-```
+```swift
 AdmAI_Manager.shared.textToSpeech(text: "Nội dụng cần chuyển sang audio", speakerID: "Mã ID người đọc", sampleRate: "Tần số Audio", outputFormat: "Định dạng Audio") { data, value, error in
   if let data = data, let value = value {
     do {
@@ -175,7 +175,7 @@ Tất cả func ocr đều hỗ trợ link online, file trong storage, image tro
 **fileLocal:** path file trong storage
 **imageData:** Image Picker convert từ image sang data
 
-```
+```swift
 guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
     return
 }
@@ -187,7 +187,7 @@ guard let imageData = image.jpegData(compressionQuality: 1.0) else {
 
 Kết quả trả về khi success dều là data OCR, bên trong chưa thông tin tương ứng từng loại
 
-```
+```swift
 func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIError?) {
     if let data = data, let value = value {
         do {
@@ -213,7 +213,7 @@ func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIE
 - getIDCard[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getIDCard(linkOnline: "url file online")
 AdmAI_Manager.shared.getIDCard(fileLocal: "path file storage)
 AdmAI_Manager.shared.getIDCard(imageData: "image to Photo")
@@ -224,7 +224,7 @@ AdmAI_Manager.shared.getIDCard(imageData: "image to Photo")
 - getRegisterCar[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getRegisterCar(linkOnline: "url file online")
 AdmAI_Manager.shared.getRegisterCar(fileLocal: "path file storage)
 AdmAI_Manager.shared.getRegisterCar(imageData: "image to Photo")
@@ -236,7 +236,7 @@ AdmAI_Manager.shared.getRegisterCar(imageData: "image to Photo")
 - getHealth[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getHealth(linkOnline: "url file online")
 AdmAI_Manager.shared.getHealth(fileLocal: "path file storage)
 AdmAI_Manager.shared.getHealth(imageData: "image to Photo")
@@ -247,7 +247,7 @@ AdmAI_Manager.shared.getHealth(imageData: "image to Photo")
 - getRegistryCar[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getRegistryCar(linkOnline: "url file online")
 AdmAI_Manager.shared.getRegistryCar(fileLocal: "path file storage)
 AdmAI_Manager.shared.getRegistryCar(imageData: "image to Photo")
@@ -258,7 +258,7 @@ AdmAI_Manager.shared.getRegistryCar(imageData: "image to Photo")
 - getExpenses[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getExpenses(linkOnline: "url file online")
 AdmAI_Manager.shared.getExpenses(fileLocal: "path file storage)
 AdmAI_Manager.shared.getExpenses(imageData: "image to Photo")
@@ -269,7 +269,7 @@ AdmAI_Manager.shared.getExpenses(imageData: "image to Photo")
 - getBusinessRegister[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getBusinessRegister(linkOnline: "url file online")
 AdmAI_Manager.shared.getBusinessRegister(fileLocal: "path file storage)
 AdmAI_Manager.shared.getBusinessRegister(imageData: "image to Photo")
@@ -281,7 +281,7 @@ AdmAI_Manager.shared.getBusinessRegister(imageData: "image to Photo")
 - getKeyValuePair[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getKeyValuePair(linkOnline: "url file online")
 AdmAI_Manager.shared.getKeyValuePair(fileLocal: "path file storage)
 AdmAI_Manager.shared.getKeyValuePair(imageData: "image to Photo")
@@ -292,7 +292,7 @@ AdmAI_Manager.shared.getKeyValuePair(imageData: "image to Photo")
 - getTabular[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getTabular(linkOnline: "url file online")
 AdmAI_Manager.shared.getTabular(fileLocal: "path file storage)
 AdmAI_Manager.shared.getTabular(imageData: "image to Photo")
@@ -303,7 +303,7 @@ AdmAI_Manager.shared.getTabular(imageData: "image to Photo")
 - getPassport[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getPassport(linkOnline: "url file online")
 AdmAI_Manager.shared.getPassport(fileLocal: "path file storage)
 AdmAI_Manager.shared.getPassport(imageData: "image to Photo")
@@ -314,7 +314,7 @@ AdmAI_Manager.shared.getPassport(imageData: "image to Photo")
 - getVisa[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getVisa(linkOnline: "url file online")
 AdmAI_Manager.shared.getVisa(fileLocal: "path file storage)
 AdmAI_Manager.shared.getVisa(imageData: "image to Photo")
@@ -325,7 +325,7 @@ AdmAI_Manager.shared.getVisa(imageData: "image to Photo")
 - getRetail[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getRetail(linkOnline: "url file online")
 AdmAI_Manager.shared.getRetail(fileLocal: "path file storage)
 AdmAI_Manager.shared.getRetail(imageData: "image to Photo")
@@ -337,7 +337,7 @@ AdmAI_Manager.shared.getRetail(imageData: "image to Photo")
 - getIeltsCertificate[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getIeltsCertificate(linkOnline: "url file online")
 AdmAI_Manager.shared.getIeltsCertificate(fileLocal: "path file storage)
 AdmAI_Manager.shared.getIeltsCertificate(imageData: "image to Photo")
@@ -348,7 +348,7 @@ AdmAI_Manager.shared.getIeltsCertificate(imageData: "image to Photo")
 - getDriver[Suffix]
 - Example
 
-```
+```swift
 AdmAI_Manager.shared.getDriver(linkOnline: "url file online")
 AdmAI_Manager.shared.getDriver(fileLocal: "path file storage)
 AdmAI_Manager.shared.getDriver(imageData: "image to Photo")
