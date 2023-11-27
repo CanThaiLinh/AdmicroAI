@@ -80,18 +80,18 @@ AdmAI_Manager.shared.configSession(session: URLSession(configuration: .default),
 
 ```swift
 AdmAI_Manager.shared.speechToText(linkOnline: "url to file audio") { data, result, error in
-		if let data = data, let value = value {
-				do {
-				    let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-				    if let jsonString = String(data: jsonData, encoding: .utf8){
-								print(jsonString)
-						}
-				}catch {
-							print("error")
-				}
-		}else {
-				print("error")
-		}
+    if let data = data, let value = value {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+            if let jsonString = String(data: jsonData, encoding: .utf8){
+                print(jsonString)
+            }
+        }catch {
+ 	    print("error")
+        }
+    }else {
+	print("error")
+    }
 }
 ```
 
@@ -104,23 +104,23 @@ AdmAI_Manager.shared.speechToText(linkOnline: "url to file audio") { data, resul
 
 ```
 AdmAI_Manager.shared.speechToText(fileLocal: "file path") { data, result, error in
-		if let data = data, let value = value {
-				do {
-				    let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-				    if let jsonString = String(data: jsonData, encoding: .utf8){
-								print(jsonString)
-						}
-				}catch {
-							print("error")
-				}
-		}else {
-				print("error")
-		}
+    if let data = data, let value = value {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+            if let jsonString = String(data: jsonData, encoding: .utf8){
+                print(jsonString)
+            }
+        }catch {
+ 	    print("error")
+        }
+    }else {
+	print("error")
+    }
 }
 ```
 
-**data:** Trở ra cục json
-**value:** Trả ra trong **results** là **SpeechToTextResult** chứa độ dài của audio, chưa các text theo từng khoảng thời gian
+- **data:** Trở ra cục json
+- **value:** Trả ra trong **results** là **SpeechToTextResult** chứa độ dài của audio, chưa các text theo từng khoảng thời gian
 
 ## Text To Speech
 
