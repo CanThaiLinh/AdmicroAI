@@ -168,12 +168,12 @@ speakerID, sampleRate, outputFormat đều đã được định dạng có sẵ
 - **speakerID:** SpeechSpeakerID
 - **sampleRate:** SpeechSampleRate
 - **outputFormat:** SpeechFormat
-#Ocr
+# Ocr
 Tất cả func ocr đều hỗ trợ link online, file trong storage, image trong photo
-[Tên hàm][Suffix]
-**linkOnline:** url file online
-**fileLocal:** path file trong storage
-**imageData:** Image Picker convert từ image sang data
+- [Tên hàm][Suffix]
++ **linkOnline:** url file online
++ **fileLocal:** path file trong storage
++ **imageData:** Image Picker convert từ image sang data
 
 ```swift
 guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
@@ -205,8 +205,8 @@ func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIE
 
 ```
 
-**data:** Trả ra cục json tương ứng từng loại
-**value:**: Trả ra Model chứa thông tin chi tiết tương ứng từng loại
+- **data:** Trả ra cục json tương ứng từng loại
+- **value:**: Trả ra Model chứa thông tin chi tiết tương ứng từng loại
 
 ## Căn cước công dân
 
