@@ -82,12 +82,12 @@ AdmAI_Manager.shared.configSession(session: URLSession(configuration: .default),
 AdmAI_Manager.shared.speechToText(linkOnline: "url to file audio") { data, result, error in
     if let data = data, let value = value {
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-            if let jsonString = String(data: jsonData, encoding: .utf8){
-                print(jsonString)
-            }
-        }catch {
- 	    print("error")
+	    let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+		if let jsonString = String(data: jsonData, encoding: .utf8){
+		    print(jsonString)
+		}
+	}catch {
+            print("error")
         }
     }else {
 	print("error")
@@ -107,14 +107,14 @@ AdmAI_Manager.shared.speechToText(fileLocal: "file path") { data, result, error 
     if let data = data, let value = value {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-            if let jsonString = String(data: jsonData, encoding: .utf8){
-                print(jsonString)
-            }
-        }catch {
- 	    print("error")
-        }
+                if let jsonString = String(data: jsonData, encoding: .utf8){
+                    print(jsonString)
+		}
+	}catch {
+	    print("error")
+	}
     }else {
-	print("error")
+        print("error")
     }
 }
 ```
@@ -168,12 +168,15 @@ speakerID, sampleRate, outputFormat đều đã được định dạng có sẵ
 - **speakerID:** SpeechSpeakerID
 - **sampleRate:** SpeechSampleRate
 - **outputFormat:** SpeechFormat
+
 # Ocr
+
 Tất cả func ocr đều hỗ trợ link online, file trong storage, image trong photo
-- [Tên hàm][Suffix]
-+ **linkOnline:** url file online
-+ **fileLocal:** path file trong storage
-+ **imageData:** Image Picker convert từ image sang data
+[Tên hàm][Suffix]
+
+- **linkOnline:** url file online
+- **fileLocal:** path file trong storage
+- **imageData:** Image Picker convert từ image sang data
 
 ```swift
 guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
@@ -206,7 +209,7 @@ func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIE
 ```
 
 - **data:** Trả ra cục json tương ứng từng loại
-- **value:**: Trả ra Model chứa thông tin chi tiết tương ứng từng loại
+- **value:** Trả ra Model chứa thông tin chi tiết tương ứng từng loại
 
 ## Căn cước công dân
 
@@ -215,7 +218,7 @@ func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIE
 
 ```swift
 AdmAI_Manager.shared.getIDCard(linkOnline: "url file online")
-AdmAI_Manager.shared.getIDCard(fileLocal: "path file storage)
+AdmAI_Manager.shared.getIDCard(fileLocal: "path file storage")
 AdmAI_Manager.shared.getIDCard(imageData: "image to Photo")
 ```
 
@@ -226,7 +229,7 @@ AdmAI_Manager.shared.getIDCard(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getRegisterCar(linkOnline: "url file online")
-AdmAI_Manager.shared.getRegisterCar(fileLocal: "path file storage)
+AdmAI_Manager.shared.getRegisterCar(fileLocal: "path file storage")
 AdmAI_Manager.shared.getRegisterCar(imageData: "image to Photo")
 
 ```
@@ -260,7 +263,7 @@ AdmAI_Manager.shared.getRegistryCar(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getExpenses(linkOnline: "url file online")
-AdmAI_Manager.shared.getExpenses(fileLocal: "path file storage)
+AdmAI_Manager.shared.getExpenses(fileLocal: "path file storage")
 AdmAI_Manager.shared.getExpenses(imageData: "image to Photo")
 ```
 
@@ -271,7 +274,7 @@ AdmAI_Manager.shared.getExpenses(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getBusinessRegister(linkOnline: "url file online")
-AdmAI_Manager.shared.getBusinessRegister(fileLocal: "path file storage)
+AdmAI_Manager.shared.getBusinessRegister(fileLocal: "path file storage")
 AdmAI_Manager.shared.getBusinessRegister(imageData: "image to Photo")
 
 ```
@@ -283,7 +286,7 @@ AdmAI_Manager.shared.getBusinessRegister(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getKeyValuePair(linkOnline: "url file online")
-AdmAI_Manager.shared.getKeyValuePair(fileLocal: "path file storage)
+AdmAI_Manager.shared.getKeyValuePair(fileLocal: "path file storage")
 AdmAI_Manager.shared.getKeyValuePair(imageData: "image to Photo")
 ```
 
@@ -293,8 +296,28 @@ AdmAI_Manager.shared.getKeyValuePair(imageData: "image to Photo")
 - Example
 
 ```swift
+func handleDataResponse(data: Dictionary<String, Any>?, value: Any?, error: APIError?) {
+    if let data = data, let value = value {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+            if let jsonString = String(data: jsonData, encoding: .utf8){
+                print("jsonString")
+            }
+        } catch {
+            print("Error")
+        }
+    }else {
+        print("Error")
+    }
+}
+```
+
+- **data:** Trả ra cục json
+- **value:** Trả ra mảng model
+
+```swift
 AdmAI_Manager.shared.getTabular(linkOnline: "url file online")
-AdmAI_Manager.shared.getTabular(fileLocal: "path file storage)
+AdmAI_Manager.shared.getTabular(fileLocal: "path file storage")
 AdmAI_Manager.shared.getTabular(imageData: "image to Photo")
 ```
 
@@ -304,8 +327,27 @@ AdmAI_Manager.shared.getTabular(imageData: "image to Photo")
 - Example
 
 ```swift
+func handleDataResponse(data: Dictionary<String, Any>?, error: APIError?) {
+    if let data = data {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+            if let jsonString = String(data: jsonData, encoding: .utf8){
+                print("jsonString")
+            }
+        } catch {
+            print("Error")
+        }
+    }else {
+        print("Error")
+    }
+}
+```
+
+- **data:** Trả ra cục json
+
+```swift
 AdmAI_Manager.shared.getPassport(linkOnline: "url file online")
-AdmAI_Manager.shared.getPassport(fileLocal: "path file storage)
+AdmAI_Manager.shared.getPassport(fileLocal: "path file storage")
 AdmAI_Manager.shared.getPassport(imageData: "image to Photo")
 ```
 
@@ -316,7 +358,7 @@ AdmAI_Manager.shared.getPassport(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getVisa(linkOnline: "url file online")
-AdmAI_Manager.shared.getVisa(fileLocal: "path file storage)
+AdmAI_Manager.shared.getVisa(fileLocal: "path file storage")
 AdmAI_Manager.shared.getVisa(imageData: "image to Photo")
 ```
 
@@ -327,7 +369,7 @@ AdmAI_Manager.shared.getVisa(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getRetail(linkOnline: "url file online")
-AdmAI_Manager.shared.getRetail(fileLocal: "path file storage)
+AdmAI_Manager.shared.getRetail(fileLocal: "path file storage")
 AdmAI_Manager.shared.getRetail(imageData: "image to Photo")
 
 ```
@@ -339,7 +381,7 @@ AdmAI_Manager.shared.getRetail(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getIeltsCertificate(linkOnline: "url file online")
-AdmAI_Manager.shared.getIeltsCertificate(fileLocal: "path file storage)
+AdmAI_Manager.shared.getIeltsCertificate(fileLocal: "path file storage")
 AdmAI_Manager.shared.getIeltsCertificate(imageData: "image to Photo")
 ```
 
@@ -350,9 +392,10 @@ AdmAI_Manager.shared.getIeltsCertificate(imageData: "image to Photo")
 
 ```swift
 AdmAI_Manager.shared.getDriver(linkOnline: "url file online")
-AdmAI_Manager.shared.getDriver(fileLocal: "path file storage)
+AdmAI_Manager.shared.getDriver(fileLocal: "path file storage")
 AdmAI_Manager.shared.getDriver(imageData: "image to Photo")
 ```
 
 # Face
-Update
+
+update
