@@ -67,9 +67,8 @@ Register cần request lên server để lấy thông tin
 ```swift
 import AdmicroAI
 
-AdmAI_Manager.shared.register(email: "guest1@gmail.com", password: "abcd1234", expire: 5)
+AdmAI_Manager.shared.register(email: "guest1@gmail.com", password: "abcd1234")
 AdmAI_Manager.shared.enableDebugLog()
-AdmAI_Manager.shared.configSession(session: URLSession(configuration: .default), requestTimeout: 20)
 ```
 
 # Speech
