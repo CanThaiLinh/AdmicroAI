@@ -59,18 +59,19 @@ Hoặc thêm vào Cartfile
 
 Tiến hành kích hoạt SDK, việc này nên được thực hiện tại **didFinishLaunchingWithOptions** của **AppDegate**
 
-Để có thể sử dụng các tính năng, thì cần đăng kí username, password trước.
-
-Username và password được cấp từ bên hỗ trợ
-
-Register cần request lên server để lấy thông tin
-
 ```swift
 import AdmicroAI
 
 AdmAI_Manager.shared.register(email: "guest1@gmail.com", password: "abcd1234")
 AdmAI_Manager.shared.enableDebugLog()
+AdmAI_Manager.shared.delegate = self
+AdmAI_Manager.shared.start()
+
 ```
+
+Để có thể sử dụng các tính năng của **OCR**, **Speech** thì cần đăng kí username, password trước( nếu mà không cần sử dụng đến thì không cần đăng kí)
+
+Username và password được cấp từ bên hỗ trợ
 
 # Speech
 
