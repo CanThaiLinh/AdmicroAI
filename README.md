@@ -16,6 +16,7 @@
 | --- | --- | --- | --- |
 | 1 | 0.1.1 | Developing | Speech, Ocr |
 | 2 | 1.0.0 | Developing | Speech, Ocr |
+| 3 | 1.0.1 | Developing | Face        |
 
 ## Yêu cầu
 
