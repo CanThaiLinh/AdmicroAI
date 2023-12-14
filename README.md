@@ -3,7 +3,7 @@
 
 ## Version
 
-- **Number:** 1.0.0
+- **Number:** 1.0.1
 - **Type:** Developing
 
 ## Demo
