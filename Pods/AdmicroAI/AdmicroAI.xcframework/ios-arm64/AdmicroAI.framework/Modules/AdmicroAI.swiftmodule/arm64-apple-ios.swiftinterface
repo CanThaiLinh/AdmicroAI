@@ -1,0 +1,731 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AdmicroAI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import AdmicroAI
+import SystemConfiguration.CaptiveNetwork
+import CoreLocation
+import Foundation
+import Network
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct RegistryCarModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegistryCarData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegistryCarImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegistryCarResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegistryCarValue : Swift.Codable {
+  public var registryNumber: Swift.String
+  public var vehicleNo: Swift.String
+  public var type: Swift.String
+  public var mark: Swift.String
+  public var modelCode: Swift.String
+  public var engineNumber: Swift.String
+  public var chassisNumber: Swift.String
+  public var manufacturedYear: Swift.String
+  public var lifeTime: Swift.String
+  public var commercialUse: Swift.String
+  public var modification: Swift.String
+  public var wheelFormula: Swift.String
+  public var wheelTread: Swift.String
+  public var overallDimension: Swift.String
+  public var insideCargo: Swift.String
+  public var wheelBase: Swift.String
+  public var kerbMass: Swift.String
+  public var designPay: Swift.String
+  public var designTotal: Swift.String
+  public var designTowed: Swift.String
+  public var permissibleNo: Swift.String
+  public var typeFuelUse: Swift.String
+  public var engineDis: Swift.String
+  public var outputRpm: Swift.String
+  public var seriNo: Swift.String
+  public var tireNumber: Swift.String
+  public var inspectionReport: Swift.String
+  public var validUntil: Swift.String
+  public var issuedOnDay: Swift.String
+  public var equippedTachograp: Swift.String
+  public var equippedCamera: Swift.String
+  public var inspectionStamp: Swift.String
+  public var note: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceFilterCheckinData : Swift.Codable {
+  public let checkinTime: Swift.String
+  public let email: Swift.String
+  public let employeeCode: Swift.String
+  public let link: Swift.String
+  public let name: Swift.String
+  public let probability: Swift.String
+  public let imageId: Swift.String
+  public func checkinTimeFormatter() -> Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PassportModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PassportData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PassportImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IeltsModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IeltsData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IeltsImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IeltsResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IeltsValue : Swift.Codable {
+  public var type: Swift.String
+  public var numberCentre: Swift.String
+  public var numberCandidate: Swift.String
+  public var dateRegister: Swift.String
+  public var nameFamily: Swift.String
+  public var nameFirst: Swift.String
+  public var candidateID: Swift.String
+  public var birthDay: Swift.String
+  public var sex: Swift.String
+  public var schemeCode: Swift.String
+  public var countryNati: Swift.String
+  public var firstLang: Swift.String
+  public var overallBand: Swift.String
+  public var cefrLevel: Swift.String
+  public var writing: Swift.String
+  public var listening: Swift.String
+  public var reading: Swift.String
+  public var speaking: Swift.String
+  public var numberTest: Swift.String
+  public var dateTest: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IDCardModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IDCardData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IDCardImages : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IDCardResults : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IDCardValue : Swift.Codable {
+  public var numberID: Swift.String
+  public var fullName: Swift.String
+  public var birthDay: Swift.String
+  public var sex: Swift.String
+  public var nationality: Swift.String
+  public var domicireAddress: Swift.String
+  public var permanentAddress: Swift.String
+  public var dueDate: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCarModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCarData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCarImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCarResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCarValue : Swift.Codable {
+  public var fullName: Swift.String
+  public var engineN: Swift.String
+  public var address: Swift.String
+  public var passport: Swift.String
+  public var chassisN: Swift.String
+  public var brand: Swift.String
+  public var type: Swift.String
+  public var modelCode: Swift.String
+  public var color: Swift.String
+  public var seatCapacity: Swift.String
+  public var capacity: Swift.String
+  public var powerHorse: Swift.String
+  public var yearManufacture: Swift.String
+  public var emptyWeight: Swift.String
+  public var length: Swift.String
+  public var width: Swift.String
+  public var height: Swift.String
+  public var sit: Swift.String
+  public var stand: Swift.String
+  public var lie: Swift.String
+  public var goods: Swift.String
+  public var origin: Swift.String
+  public var plateN: Swift.String
+  public var firstRegister: Swift.String
+  public var dateOfExpiry: Swift.String
+  public var number: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HealthModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HealthData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HealthImages : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HealthResults : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HealthValue : Swift.Codable {
+  public var number: Swift.String
+  public var name: Swift.String
+  public var birthDay: Swift.String
+  public var sex: Swift.String
+  public var address: Swift.String
+  public var addressKCB: Swift.String
+  public var numberCode: Swift.String
+  public var date: Swift.String
+  public var dateRegister: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AdmAIError : Swift.Error {
+  case resposeFormatError
+  case canceled
+  case invalidURL
+  case serverError(Swift.Int?, Swift.String?)
+  case unknown(any Swift.Error)
+  case tryDataError
+  case tokenExpire
+  case registerMissing
+  case retriesFaild(any Swift.Error)
+  case noNetworkConnection
+  case error(Swift.String)
+}
+public struct DriverModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DriverData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DriverImages : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DriverResults : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DriverValue : Swift.Codable {
+  public var id: Swift.String
+  public var name: Swift.String
+  public var dateBirth: Swift.String
+  public var nationality: Swift.String
+  public var address: Swift.String
+  public var place: Swift.String
+  public var dateIssue: Swift.String
+  public var expiryDate: Swift.String
+  public var classs: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KeyValuePairModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KeyValuePairData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KeyValuePairImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KeyValuePairResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KeyValuePairValue : Swift.Codable {
+  public var fullName: Swift.String
+  public var ageSex: Swift.String
+  public var address: Swift.String
+  public var diagnostic: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public protocol AdmAI_LoggerProtocol {
+  @objc var enableAll: Swift.Bool { get set }
+  @objc var printError: Swift.Bool { get set }
+  @objc var type: AdmicroAI.AdmAI_LogStream { get set }
+  @objc func publicPrintLog(message: Swift.String, type: AdmicroAI.AdmAI_LogStream)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class AdmAI_Logger : ObjectiveC.NSObject, AdmicroAI.AdmAI_LoggerProtocol {
+  @objc public var enableAll: Swift.Bool
+  @objc public var printError: Swift.Bool
+  @objc public var type: AdmicroAI.AdmAI_LogStream
+  @objc override dynamic public init()
+  @objc open func publicPrintLog(message: Swift.String, type: AdmicroAI.AdmAI_LogStream)
+  public func clone(with type: AdmicroAI.AdmAI_LogStream) -> any AdmicroAI.AdmAI_LoggerProtocol
+  @objc deinit
+}
+@objc public enum AdmAI_LogStream : Swift.Int {
+  case sdkManager
+  case apiUtilities
+  case utilities
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct ExpensesModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExpensesData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExpensesResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExpensesValue : Swift.Codable {
+  public var nameDocument: Swift.String
+  public var forInternate: Swift.String
+  public var date: Swift.String
+  public var bankName: Swift.String
+  public var includingFee: Swift.String
+  public var amountFigures: Swift.String
+  public var amountWords: Swift.String
+  public var details: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FacePredictData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Location : Swift.Codable {
+  public let latitude: Swift.String
+  public let longitude: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum SpeechSpeakerID : Swift.String, Swift.CaseIterable {
+  case MinhPhuong
+  case QuocKhanh
+  case HoangAnhQuan
+  case VanHoang
+  case ThanhThao
+  case MinhHoa
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AdmicroAI.SpeechSpeakerID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [AdmicroAI.SpeechSpeakerID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SpeechSampleRate : Swift.Int, Swift.CaseIterable {
+  case Rate8000
+  case Rate16000
+  case Rate22050
+  case Rate44100
+  case Rate48000
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [AdmicroAI.SpeechSampleRate]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [AdmicroAI.SpeechSampleRate] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SpeechFormat : Swift.String, Swift.CaseIterable {
+  case wav
+  case mp3
+  case mp4
+  case m4a
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AdmicroAI.SpeechFormat]
+  public typealias RawValue = Swift.String
+  public static var allCases: [AdmicroAI.SpeechFormat] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SpeechToTextModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SpeechToTextData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SpeechToTextResult : Swift.Codable {
+  public let duration: Swift.String, inferTime: Swift.String
+  public let text: [AdmicroAI.SpeechToTextText]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SpeechToTextText : Swift.Codable {
+  public let start: Swift.String, stop: Swift.String, text: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceInfoData : Swift.Codable {
+  public let employeeCode: Swift.String
+  public let name: Swift.String
+  public let email: Swift.String
+  public let faceMask: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol AdmAI_ManagerDelegate : AnyObject {
+  func stateSDK(_ state: Swift.Bool)
+}
+@_hasMissingDesignatedInitializers public class AdmAI_Manager : AdmicroAI.AdmAI_ManagerProtocol {
+  public static let shared: AdmicroAI.AdmAI_Manager
+  weak public var delegate: (any AdmicroAI.AdmAI_ManagerDelegate)?
+  public func enableDebugLog()
+  public func register(email: Swift.String, password: Swift.String)
+  public func start()
+  @objc deinit
+}
+extension AdmicroAI.AdmAI_Manager {
+  public func speechToText(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.SpeechToTextResult?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func speechToText(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.SpeechToTextResult?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func textToSpeech(text: Swift.String, speakerID: AdmicroAI.SpeechSpeakerID, sampleRate: AdmicroAI.SpeechSampleRate, outputFormat: AdmicroAI.SpeechFormat, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.TextToSpeechData?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+}
+extension AdmicroAI.AdmAI_Manager {
+  public func getIDCard(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getIDCard(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getIDCard(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegisterCar(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegisterCar(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegisterCar(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getHealth(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getHealth(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getHealth(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegistryCar(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegistryCar(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRegistryCar(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getExpenses(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getExpenses(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getExpenses(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getBusinessRegister(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getBusinessRegister(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getBusinessRegister(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getKeyValuePair(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getKeyValuePair(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getKeyValuePair(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getTabular(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getTabular(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getTabular(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getPassport(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getPassport(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getPassport(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRetail(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRetail(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getRetail(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getVisa(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getVisa(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getVisa(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getIeltsCertificate(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getIeltsCertificate(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getIeltsCertificate(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getDriver(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getDriver(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func getDriver(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+}
+extension AdmicroAI.AdmAI_Manager {
+  public func faceRegister(image: UIKit.UIImage, name: Swift.String, email: Swift.String, employeeCode: Swift.Int, faceMask: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceRegister(fileLocal: Foundation.URL, name: Swift.String, email: Swift.String, employeeCode: Swift.Int, faceMask: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func facePredict(image: UIKit.UIImage, completionHandler: ((AdmicroAI.Location?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func facePredict(fileLocal: Foundation.URL, completionHandler: ((AdmicroAI.Location?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceCheckinHistory(numberRecord: Swift.Int, completionHandler: (([AdmicroAI.FaceCheckinHistoryData]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceCheckinFilter(employeeCode: Swift.Int, fromDate: Swift.Int, toDate: Swift.Int, listEmail: [Swift.String], check: Swift.Int = 1, page: Swift.Int = 0, limit: Swift.Int = 100, completionHandler: (([AdmicroAI.FaceFilterCheckinData]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceGetInfo(email: Swift.String, completionHandler: ((AdmicroAI.FaceInfoData?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceUpdateInfo(employeeCode: Swift.Int, email: Swift.String, name: Swift.String, telegramID: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceFasPredict(image: UIKit.UIImage, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceFasPredict(fileLocal: Foundation.URL, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceCompare(image1: UIKit.UIImage, image2: UIKit.UIImage, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  public func faceCompare(fileLocal1: Foundation.URL, fileLocal2: Foundation.URL, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+}
+public struct TextToSpeechModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TextToSpeechData : Swift.Codable {
+  public let filePath: Swift.String?
+  public let audio: Swift.String?
+  public let info: AdmicroAI.TextToSpeechInfo
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TextToSpeechInfo : Swift.Codable {
+  public let text: Swift.String
+  public let id: Swift.String
+  public let sampleRate: Swift.Int
+  public let format: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol AdmAI_ManagerProtocol {
+  func enableDebugLog()
+  func register(email: Swift.String, password: Swift.String)
+  func speechToText(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.SpeechToTextResult?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func speechToText(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.SpeechToTextResult?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func textToSpeech(text: Swift.String, speakerID: AdmicroAI.SpeechSpeakerID, sampleRate: AdmicroAI.SpeechSampleRate, outputFormat: AdmicroAI.SpeechFormat, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.TextToSpeechData?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIDCard(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIDCard(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIDCard(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IDCardValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegisterCar(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegisterCar(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegisterCar(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegisterCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getHealth(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getHealth(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getHealth(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.HealthValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegistryCar(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegistryCar(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRegistryCar(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RegistryCarValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getExpenses(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getExpenses(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getExpenses(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.ExpensesValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getBusinessRegister(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getBusinessRegister(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getBusinessRegister(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.BusinessRegisterValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getKeyValuePair(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getKeyValuePair(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getKeyValuePair(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.KeyValuePairValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getTabular(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getTabular(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getTabular(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, [AdmicroAI.TabularDataResult]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getPassport(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getPassport(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getPassport(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRetail(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRetail(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getRetail(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.RetailValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getVisa(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getVisa(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getVisa(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.VisaValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIeltsCertificate(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIeltsCertificate(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getIeltsCertificate(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.IeltsValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getDriver(linkOnline: Swift.String, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getDriver(image: UIKit.UIImage, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func getDriver(fileLocal: Foundation.URL, completionHandler: ((Swift.Dictionary<Swift.String, Any>?, AdmicroAI.DriverValue?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceRegister(image: UIKit.UIImage, name: Swift.String, email: Swift.String, employeeCode: Swift.Int, faceMask: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceRegister(fileLocal: Foundation.URL, name: Swift.String, email: Swift.String, employeeCode: Swift.Int, faceMask: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func facePredict(image: UIKit.UIImage, completionHandler: ((AdmicroAI.Location?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func facePredict(fileLocal: Foundation.URL, completionHandler: ((AdmicroAI.Location?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceCheckinHistory(numberRecord: Swift.Int, completionHandler: (([AdmicroAI.FaceCheckinHistoryData]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceCheckinFilter(employeeCode: Swift.Int, fromDate: Swift.Int, toDate: Swift.Int, listEmail: [Swift.String], check: Swift.Int, page: Swift.Int, limit: Swift.Int, completionHandler: (([AdmicroAI.FaceFilterCheckinData]?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceGetInfo(email: Swift.String, completionHandler: ((AdmicroAI.FaceInfoData?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceUpdateInfo(employeeCode: Swift.Int, email: Swift.String, name: Swift.String, telegramID: Swift.Int, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceFasPredict(image: UIKit.UIImage, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceFasPredict(fileLocal: Foundation.URL, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceCompare(image1: UIKit.UIImage, image2: UIKit.UIImage, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+  func faceCompare(fileLocal1: Foundation.URL, fileLocal2: Foundation.URL, completionHandler: ((Swift.String?, AdmicroAI.AdmAIError?) -> Swift.Void)?)
+}
+public struct VisaModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VisaData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VisaImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VisaResults : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VisaValue : Swift.Codable {
+  public var numberID: Swift.String
+  public var sign: Swift.String
+  public var dateValid: Swift.String
+  public var dateTo: Swift.String
+  public var useCard: Swift.String
+  public var passportNo: Swift.String
+  public var productAt: Swift.String
+  public var dateRange: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BusinessRegisterModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BusinessRegisterData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BusinessRegisterImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BusinessRegisterResult : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BusinessRegisterValue : Swift.Codable {
+  public var nameBusiness: Swift.String
+  public var nameForeign: Swift.String
+  public var nameAbbrevi: Swift.String
+  public var numberBusiness: Swift.String
+  public var dateRegister: Swift.String
+  public var dateChange: Swift.String
+  public var address: Swift.String
+  public var phone: Swift.String
+  public var fax: Swift.String
+  public var email: Swift.String
+  public var website: Swift.String
+  public var authorizedCapital: Swift.String
+  public var parValue: Swift.String
+  public var totalParValue: Swift.String
+  public var nameRepresentative: Swift.String
+  public var titleRepresentative: Swift.String
+  public var sex: Swift.String
+  public var birthDay: Swift.String
+  public var nation: Swift.String
+  public var nationality: Swift.String
+  public var typeDocument: Swift.String
+  public var numberDocument: Swift.String
+  public var date: Swift.String
+  public var issuedBy: Swift.String
+  public var addressHouse: Swift.String
+  public var addressCurrent: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TabularDataModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TabularDataData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TabularDataImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TabularDataResult : Swift.Codable {
+  public let boxes: [Swift.Int]
+  public let key: Swift.String, value: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension Foundation.Data {
+  public mutating func append(_ string: Swift.String, encoding: Swift.String.Encoding = .utf8)
+}
+public struct RetailModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RetailData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RetailImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RetailResults : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RetailValue : Swift.Codable {
+  public var id: Swift.String
+  public var name: Swift.String
+  public var dateBirth: Swift.String
+  public var nationality: Swift.String
+  public var address: Swift.String
+  public var place: Swift.String
+  public var dateIssue: Swift.String
+  public var expiryDate: Swift.String
+  public var classs: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceCheckinHistoryData : Swift.Codable {
+  public let checkinTime: Swift.String
+  public let email: Swift.String
+  public let employeeCode: Swift.String
+  public let link: Swift.String
+  public let name: Swift.String
+  public let probability: Swift.String
+  public let imageId: Swift.String
+  public func checkinTimeFormatter() -> Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension AdmicroAI.AdmAI_LogStream : Swift.Equatable {}
+extension AdmicroAI.AdmAI_LogStream : Swift.Hashable {}
+extension AdmicroAI.AdmAI_LogStream : Swift.RawRepresentable {}
+extension AdmicroAI.SpeechSpeakerID : Swift.Equatable {}
+extension AdmicroAI.SpeechSpeakerID : Swift.Hashable {}
+extension AdmicroAI.SpeechSpeakerID : Swift.RawRepresentable {}
+extension AdmicroAI.SpeechSampleRate : Swift.Equatable {}
+extension AdmicroAI.SpeechSampleRate : Swift.Hashable {}
+extension AdmicroAI.SpeechSampleRate : Swift.RawRepresentable {}
+extension AdmicroAI.SpeechFormat : Swift.Equatable {}
+extension AdmicroAI.SpeechFormat : Swift.Hashable {}
+extension AdmicroAI.SpeechFormat : Swift.RawRepresentable {}

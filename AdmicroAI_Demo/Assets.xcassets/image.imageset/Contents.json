@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "digital-paintaing_721243-140.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "digital-paintaing_721243-140@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "digital-paintaing_721243-140@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

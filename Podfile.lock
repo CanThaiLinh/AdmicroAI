@@ -1,0 +1,20 @@
+PODS:
+  - AdmicroAI (1.0.1)
+  - IQKeyboardManager (6.5.16)
+
+DEPENDENCIES:
+  - AdmicroAI
+  - IQKeyboardManager
+
+SPEC REPOS:
+  trunk:
+    - AdmicroAI
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  AdmicroAI: 9a999aa2eb18cdd40aa9f1c0768e9f9ea691391b
+  IQKeyboardManager: 024b54d7dcb765c5bc99882cb4d5ea24a8cb7c3c
+
+PODFILE CHECKSUM: 350db44081a2ffc616fd5fc97445855b93054853
+
+COCOAPODS: 1.14.3

@@ -1,0 +1,6 @@
+framework module Pods_AdmicroAI_Demo {
+  umbrella header "Pods-AdmicroAI_Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+framework module AdmicroAI {
+  umbrella header "AdmicroAI.h"
+  export *
+
+  module * { export * }
+}
+
+module AdmicroAI.Swift {
+  header "AdmicroAI-Swift.h"
+  requires objc
+}

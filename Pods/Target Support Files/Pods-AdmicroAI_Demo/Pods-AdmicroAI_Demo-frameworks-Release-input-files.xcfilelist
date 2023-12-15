@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AdmicroAI_Demo/Pods-AdmicroAI_Demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/AdmicroAI/AdmicroAI.framework/AdmicroAI
