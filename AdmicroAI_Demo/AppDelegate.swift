@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        AdmAI_Manager.shared.register(email: "", password: "")
+        AdmAI_Manager.shared.register(email: " ", password: " ")
         AdmAI_Manager.shared.enableDebugLog()
         IQKeyboardManager.shared().isEnabled = true
         AdmAI_Manager.shared.delegate = self
